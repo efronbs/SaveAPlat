@@ -1,0 +1,55 @@
+<!doctype html>
+  <head>
+    <title>Food Sharing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK5hb4W-XAXLxlGbju6XG0uTu9EhD9kIo&callback=initMap"></script>
+
+    <script src="js/map.js"></script>
+    <script src="js/scrollbar.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  </head>
+
+  <body ng-app="FoodSharer">
+
+    <!-- <img src="..\\img\\outdoors-background.jpg" class=background-image> -->
+
+    <div class="header">
+      <!-- <img src="..\\img\\banner.jpg" class="banner"> -->
+      <h1 class="header-text">Save A Plate</h1>
+    </div>
+
+    <div class="main-wrapper" ng-controller="MainController">
+      <div class="nav-wrapper">
+        <div class = "input-wrapper">
+          <input type="search" id="searchbar" placeholder="Search for ingredients" ng-model="searchText.ingredients">
+          <button type="button" id="post-button">Post</button>
+        </div>
+        <div id="navigation">
+            <div ng-repeat="post in posts | filter:searchText:string">
+              <food-info info="post" class="card"></food-info>
+            </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+    <!-- Directives -->
+    <script src="js/directives/foodInfo.js"></script>
+
+  </body>
+
+</html>

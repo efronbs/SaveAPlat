@@ -1,0 +1,33 @@
+<div ng-mouseenter="enterCard($event)" ng-mouseleave="exitCard()" ng-click="setMapLocation()">
+
+  <div class="icon-wrapper">
+    <img class="icon" ng-src="{{ info.icon }}">
+  </div>
+
+  <div class="dishname-container">
+    <h2 class="dishname"> {{ info.title }} </h2>
+  </div>
+
+  <div id="hider" style="display: none">
+    <hr class="card-divider">
+
+    <div class="text-container">
+      <p class="cardtext"> {{ info.description }} </p>
+    </div>
+
+    <hr class="card-divider">
+
+    <div class="text-container">
+      <p class="cardtext"> <span > INGREDIENTS: </span> {{ info.ingredients }} </p>
+    </div>
+
+    <hr class="card-divider">
+
+    <div class="text-container">
+      <p class="cardtext"> {{ info.phone }} </p>
+      <p class="cardtext"> {{ info.address }} </p>
+    </div>
+  </div>
+
+</div>
+<!-- angular material & angular flex layout -->
