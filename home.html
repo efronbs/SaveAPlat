@@ -5,7 +5,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK5hb4W-XAXLxlGbju6XG0uTu9EhD9kIo&callback=initMap"></script>
 
     <script src="js/map.js"></script>
-    <script src="js/scrollbar.js"></script>
+    <script src="js/page.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
@@ -28,6 +28,22 @@
         <div class = "input-wrapper">
           <input type="search" id="searchbar" placeholder="Search for ingredients" ng-model="searchText.ingredients">
           <button type="button" id="post-button">Post</button>
+          <!--Signup Modal  -->
+          <div id="signup-modal" class="modal">
+            <div class="modal-content">
+              <form id="modal-submit-form">
+                Image: <input type="text" id="image" class="modal-input"><br>
+                Title: <input type="text" id="title" class="modal-input"><br>
+                Building: <input type="text" id="building" class="modal-input"><br>
+                Room: <input type="text" id="room" class="modal-input"><br>
+                Phone: <input type="text" id="phone" class="modal-input"><br>
+                Description: <input type="text" id="description" class="modal-input"><br>
+                <!-- Ingredients: <input type="text" class="modal-input"><br> -->
+              </form>
+              <button class="modal-submit" ng-click="addItem()">Submit</button>
+            </div>
+          </div>
+
         </div>
         <div id="navigation">
             <div ng-repeat="post in posts | filter:searchText:string">
