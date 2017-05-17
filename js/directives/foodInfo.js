@@ -24,7 +24,8 @@ app.directive('foodInfo', function() {
       }
 
       scope.setMapLocation = function() {
-        setLocation(scope.info.address);
+        // setLocation(scope.info.address);
+        setPathToFood(scope.info.address);
       }
 
     }

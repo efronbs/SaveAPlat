@@ -1,7 +1,8 @@
 body {
     /*background-color: #e5e2dc;*/
     /*background-color: #f7c331;*/
-    background-color: #DCC7AA;
+    /*background-color: #DCC7AA;*/
+    background-color: #7F1114;
 }
 /*
 .background-image {
@@ -52,8 +53,9 @@ h1 {
   position: relative;
   margin: 0 0 5px 2%;
   width: 18%;
-  background-color: #6B7A8F;
-  color: white;
+  /*background-color: #6B7A8F;*/
+  background-color: #B3B3B3;
+  color: black;
   text-align: center;
   border-radius: 4px;
 }
@@ -97,7 +99,8 @@ h1 {
 
 .header-text {
   /*color: #f7c331;*/
-  color: #f7882f;
+  /*color: #f7882f;*/
+  color: black;
   /*-webkit-text-stroke: .02px black;*/
 }
 
